@@ -26,7 +26,6 @@ class LoginController extends Controller
             return $this->authenticated($request, Auth::user());
         }
 
-        // Authentication failed
         return redirect()->back()->withErrors(['email' => 'Invalid credentials']);
     }
 
